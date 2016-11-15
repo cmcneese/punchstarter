@@ -1,1 +1,18 @@
-{{outlet}}
+<div class="container">
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Goal</th>
+      <th></th>
+    </thead>
+
+    <tbody>
+      {{#each model as |project|}}
+        <tr>
+          <td>{{ project.name }}</td>
+          <td>${{locale-number project.goal }}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
