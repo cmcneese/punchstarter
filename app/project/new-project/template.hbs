@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Make a New Project</h2>
+
+  <form {{action "saveForm" name goal description on="submit"}}>
+    <p>
+      {{input type="text" placeholder="Name" value=name}}
+    </p>
+    <p>
+      {{input type="text" placeholder="Goal" value=goal}}
+    </p>
+    <p>
+      {{textarea placeholder="Description" rows="8" cols="40" value=description}}
+    </p>
+
+    {{#link-to "project"}}Back{{/link-to}}
+    <button type="submit" name="button">Save</button>
+  </form>
+</div>
