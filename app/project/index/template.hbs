@@ -13,6 +13,7 @@
         <tr>
           <td>{{ project.name }}</td>
           <td>${{locale-number project.goal }}</td>
+          <td>{{#link-to "project.edit" project.id}}edit{{/link-to}}</td>
         </tr>
       {{/each}}
     </tbody>
